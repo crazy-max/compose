@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       EVENT_NAME: compose-docs
-      UPSTREAM_OWNER: docker
+      UPSTREAM_OWNER: crazy-max
       UPSTREAM_REPO: docker.github.io
       DOCKERFILE_TARGET: docs-reference
     steps:
