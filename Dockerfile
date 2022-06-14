@@ -105,3 +105,7 @@ COPY --from=make-go-mod-tidy /compose-cli/go.sum .
 FROM base AS check-go-mod
 COPY . .
 RUN make -f builder.Makefile check-go-mod
+
+# docs-reference is a target used as remote context from docker.github.io repo
+FROM scratch AS docs-reference
+COPY docs/reference .
