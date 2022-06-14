@@ -1,4 +1,4 @@
-name: dispatch-release
+name: Dispatch Release
 
 on:
   release:
@@ -17,7 +17,7 @@ jobs:
         name: Sending ${{ env.EVENT_NAME }} event to ${{ env.UPSTREAM_OWNER }}/${{ env.UPSTREAM_REPO }}
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PAT_DISPATCH_DOCS }}
           script: |
             const payload = {
               "context": "${{ github.server_url }}/${{ github.repository }}.git#${{ github.event.release.name }}",
