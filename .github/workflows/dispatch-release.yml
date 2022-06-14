@@ -1,0 +1,37 @@
+name: Dispatch Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    env:
+      EVENT_NAME: compose-docs
+      UPSTREAM_OWNER: crazy-max
+      UPSTREAM_REPO: docker.github.io
+      DOCKERFILE_TARGET: docs-reference
+    steps:
+      -
+        name: Sending ${{ env.EVENT_NAME }} event to ${{ env.UPSTREAM_OWNER }}/${{ env.UPSTREAM_REPO }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PAT_DISPATCH_DOCS }}
+          script: |
+            const payload = {
+              "context": "${{ github.server_url }}/${{ github.repository }}.git#${{ github.event.release.name }}",
+              "target": "${{ env.DOCKERFILE_TARGET }}",
+              "release": "${{ github.event.release.name }}"
+            };
+            console.log("payload", payload);
+            await github.rest.repos.createDispatchEvent({
+              "owner": "${{ env.UPSTREAM_OWNER }}",
+              "repo": "${{ env.UPSTREAM_REPO }}",
+              "event_type": "${{ env.EVENT_NAME }}",
+              "client_payload": payload
+            });
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1

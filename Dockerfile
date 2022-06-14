@@ -105,3 +105,12 @@ COPY --from=make-go-mod-tidy /compose-cli/go.sum .
 FROM base AS check-go-mod
 COPY . .
 RUN make -f builder.Makefile check-go-mod
+
+FROM alpine AS docs-reference-build
+RUN apk add --no-cache findutils
+WORKDIR /out
+COPY docs/reference .
+RUN for f in *.md ; do mv -- "$f" "docker_$f" ; done
+
+FROM scratch AS docs-reference
+COPY --from=docs-reference-build /out .
