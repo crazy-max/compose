@@ -20,7 +20,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const payload = {
-              "context": "${{ github.server_url }}/${{ github.context.repo.owner }}/${{ github.context.repo.repo }}.git#${{ github.event.release.name }}",
+              "context": "${{ github.server_url }}/${{ github.repository }}.git#${{ github.event.release.name }}",
               "target": "${{ env.DOCKERFILE_TARGET }}",
               "release": "${{ github.event.release.name }}"
             };
