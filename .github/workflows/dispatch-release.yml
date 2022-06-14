@@ -31,3 +31,7 @@ jobs:
               "event_type": "${{ env.EVENT_NAME }}",
               "client_payload": payload
             });
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
