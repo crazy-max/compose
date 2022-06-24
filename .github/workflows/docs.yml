@@ -12,8 +12,8 @@ jobs:
         name: Checkout docs repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GHPAT_DOCS_DISPATCH }}
-          repository: docker/docker.github.io
+          token: ${{ secrets.PAT_DISPATCH_DOCS }}
+          repository: crazy-max/docker.github.io
           ref: master
       -
         name: Prepare
@@ -39,7 +39,7 @@ jobs:
         name: Create PR on docs repo
         uses: peter-evans/create-pull-request@923ad837f191474af6b1721408744feb989a4c27 # v4.0.4
         with:
-          token: ${{ secrets.GHPAT_DOCS_DISPATCH }}
+          token: ${{ secrets.PAT_DISPATCH_DOCS }}
           commit-message: Update Compose reference API to ${{ github.event.release.name }}
           signoff: true
           branch: dispatch/compose-api-reference-${{ github.event.release.name }}
