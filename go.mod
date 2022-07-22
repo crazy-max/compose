@@ -5,20 +5,20 @@ go 1.18
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.5
 	github.com/buger/goterm v1.0.4
-	github.com/cnabio/cnab-to-oci v0.3.4
-	github.com/compose-spec/compose-go v1.2.8
+	github.com/cnabio/cnab-to-oci v0.3.5
+	github.com/compose-spec/compose-go v1.2.9
 	github.com/containerd/console v1.0.3
 	github.com/containerd/containerd v1.6.6
 	github.com/distribution/distribution/v3 v3.0.0-20210316161203-a01c71e2477e
 	github.com/docker/buildx v0.8.2 // when updating, also update the replace rules accordingly
 	github.com/docker/cli v20.10.17+incompatible
-	github.com/docker/cli-docs-tool v0.4.0
+	github.com/docker/cli-docs-tool v0.5.0
 	github.com/docker/docker v20.10.17+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/docker/go-units v0.4.0
 	github.com/golang/mock v1.6.0
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/hashicorp/go-version v1.5.0
+	github.com/hashicorp/go-version v1.6.0
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-shellwords v1.0.12
 	github.com/moby/buildkit v0.10.1-0.20220403220257-10e6f94bf90d
@@ -28,10 +28,10 @@ require (
 	github.com/opencontainers/image-spec v1.0.3-0.20211202183452-c5a74bcca799
 	github.com/pkg/errors v0.9.1
 	github.com/sanathkr/go-yaml v0.0.0-20170819195128-ed9d249f429b
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/pflag v1.0.5
-	github.com/stretchr/testify v1.7.5
+	github.com/stretchr/testify v1.8.0
 	github.com/theupdateframework/notary v0.7.0
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	gotest.tools v2.2.0+incompatible
@@ -111,7 +111,7 @@ require (
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8 // indirect
-	golang.org/x/sys v0.0.0-20220422013727-9388b58f7150 // indirect
+	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8 // indirect
