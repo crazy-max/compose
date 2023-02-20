@@ -5,10 +5,10 @@ go 1.19
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.6
 	github.com/buger/goterm v1.0.4
-	github.com/compose-spec/compose-go v1.8.1
+	github.com/compose-spec/compose-go v1.11.0
 	github.com/containerd/console v1.0.3
 	github.com/containerd/containerd v1.6.14
-	github.com/distribution/distribution/v3 v3.0.0-20221201083218-92d136e113cf
+	github.com/distribution/distribution/v3 v3.0.0-20230214150026-36d8c594d7aa
 	github.com/docker/buildx v0.9.1 // when updating, also update the replace rules accordingly
 	github.com/docker/cli v20.10.20+incompatible // replaced; see replace rule for actual version
 	github.com/docker/cli-docs-tool v0.5.0
@@ -117,11 +117,11 @@ require (
 	go.opentelemetry.io/otel/trace v1.11.2 // indirect
 	go.opentelemetry.io/proto/otlp v0.12.0 // indirect
 	golang.org/x/crypto v0.0.0-20220511200225-c6db032c6c88 // indirect
-	golang.org/x/net v0.0.0-20220906165146-f3363e06e74c // indirect
+	golang.org/x/net v0.4.0 // indirect
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8 // indirect
-	golang.org/x/sys v0.0.0-20220825204002-c680a09ffe64 // indirect
-	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/sys v0.3.0 // indirect
+	golang.org/x/term v0.3.0 // indirect
+	golang.org/x/text v0.5.0 // indirect
 	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20220502173005-c8bf987b8c21 // indirect
